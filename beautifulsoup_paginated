@@ -1,0 +1,10 @@
+import re
+import requests
+import bs4
+from urllib.request import urlopen as uReq
+from bs4 import BeautifulSoup as soup
+base_url='https://www3.forbes.com/business/37-new-cars-to-avoid/'
+response = requests.get(base_url)
+page_soup=soup(page_html,"html.parser")
+bsoup = soup(response.text)
+page_count_links=bsoup.findall('a',href=re.compile(r.""})
